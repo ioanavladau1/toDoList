@@ -16,11 +16,13 @@ public class ToDoItemServlet extends HttpServlet {
 
     private ToDoItemService toDoItemService = new ToDoItemService();
 
+
+// endpoint
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         ObjectMapper objectMapper = new ObjectMapper();
-        SaveToDoItemRequest saveToDoItemRequest = objectMapper.readValue(req.getReader(), SaveToDoItemRequest.class);
+        SaveToDoItemRequest request = objectMapper.readValue(req.getReader(), SaveToDoItemRequest.class);
 
         try {
             toDoItemService.createToDoItem(request);
