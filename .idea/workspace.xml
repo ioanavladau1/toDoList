@@ -7,37 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b3106f1-9e4b-47d0-b3a1-3a366cf8ebff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/fasttrackit/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/fasttrackit/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/fasttrackit/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/fasttrackit/domain/ToDoItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/fasttrackit/persistance/DatabaseConfiguration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/fasttrackit/persistance/ToDoItemRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/fasttrackit/service/ToDoItemService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/fasttrackit/transfer/SaveToDoItemRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/org/fasttrackit/web/ToDoItemServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/org/fasttrackit/AppTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/to-do-list-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/to-do-list-1.0-SNAPSHOT/WEB-INF/classes/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/to-do-list-1.0-SNAPSHOT/WEB-INF/classes/org/fasttrackit/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/to-do-list-1.0-SNAPSHOT/WEB-INF/classes/org/fasttrackit/domain/ToDoItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/to-do-list-1.0-SNAPSHOT/WEB-INF/classes/org/fasttrackit/persistance/DatabaseConfiguration.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/to-do-list-1.0-SNAPSHOT/WEB-INF/classes/org/fasttrackit/persistance/ToDoItemRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/to-do-list-1.0-SNAPSHOT/WEB-INF/classes/org/fasttrackit/service/ToDoItemService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/to-do-list-1.0-SNAPSHOT/WEB-INF/classes/org/fasttrackit/transfer/SaveToDoItemRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/to-do-list-1.0-SNAPSHOT/WEB-INF/classes/org/fasttrackit/web/ToDoItemServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/to-do-list-1.0-SNAPSHOT/WEB-INF/lib/jackson-annotations-2.9.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/to-do-list-1.0-SNAPSHOT/WEB-INF/lib/jackson-core-2.9.9.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/to-do-list-1.0-SNAPSHOT/WEB-INF/lib/jackson-databind-2.9.9.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/to-do-list-1.0-SNAPSHOT/WEB-INF/lib/mysql-connector-java-8.0.17.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/to-do-list-1.0-SNAPSHOT/WEB-INF/lib/protobuf-java-3.6.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/toDoList.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/fasttrackit/config/ObjectMapperConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/fasttrackit/web/ToDoItemServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/fasttrackit/web/ToDoItemServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/fasttrackit/web/ToDoItemServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/fasttrackit/web/ToDoItemServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/to-do-list-1.0-SNAPSHOT/WEB-INF/classes/org/fasttrackit/web/ToDoItemServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/to-do-list-1.0-SNAPSHOT/WEB-INF/classes/org/fasttrackit/web/ToDoItemServlet.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -100,10 +74,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/fasttrackit/web/ToDoItemServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+            <state relative-caret-position="185">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/fasttrackit/config/ObjectMapperConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#310#311#0" expanded="true" />
+                <element signature="e#345#346#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,15 +123,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/fasttrackit/domain/ToDoItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="52" selection-start-line="52" selection-end-line="52" />
             </state>
           </provider>
         </entry>
@@ -182,6 +161,7 @@
         <option value="$PROJECT_DIR$/src/main/java/org/fasttrackit/service/ToDoItemService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/fasttrackit/App.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/fasttrackit/config/ObjectMapperConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/fasttrackit/web/ToDoItemServlet.java" />
       </list>
     </option>
@@ -269,6 +249,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="org" type="462c0819:PsiDirectoryNode" />
               <item name="fasttrackit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="toDoList" type="b2602c69:ProjectViewProjectNode" />
+              <item name="toDoList" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="fasttrackit" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="toDoList" type="b2602c69:ProjectViewProjectNode" />
@@ -457,7 +447,7 @@
       <workItem from="1564592366617" duration="5307000" />
       <workItem from="1565192371582" duration="3212000" />
       <workItem from="1565195623704" duration="6568000" />
-      <workItem from="1565796848175" duration="5459000" />
+      <workItem from="1565796848175" duration="7947000" />
     </task>
     <task id="LOCAL-00001" summary="todolist">
       <created>1564592710901</created>
@@ -508,11 +498,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565202568168</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="finalized createToDoItem endpoint">
+      <created>1565802907200</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1565802907200</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20546000" />
+    <option name="totallyTimeSpent" value="23034000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -540,7 +537,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32962963" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32962963" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -591,7 +588,8 @@
     <MESSAGE value="database connections" />
     <MESSAGE value="added repository methods for CRUD operations" />
     <MESSAGE value="added service and dto layers" />
-    <option name="LAST_COMMIT_MESSAGE" value="added service and dto layers" />
+    <MESSAGE value="finalized createToDoItem endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalized createToDoItem endpoint" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/.gitignore">
@@ -686,10 +684,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/fasttrackit/config/ObjectMapperConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#345#346#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/fasttrackit/web/ToDoItemServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        <state relative-caret-position="185">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
