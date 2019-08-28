@@ -7,6 +7,7 @@ import org.fasttrackit.config.ObjectMapperConfiguration;
 import org.fasttrackit.domain.ToDoItem;
 import org.fasttrackit.service.ToDoItemService;
 import org.fasttrackit.transfer.SaveToDoItemRequest;
+import org.fasttrackit.transfer.UpdateToDoItemRequest;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,6 +27,7 @@ public class ToDoItemServlet extends HttpServlet {
 // endpoint
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        setAccesControlHeaders(resp);
 
 
         SaveToDoItemRequest request =
@@ -40,6 +42,8 @@ public class ToDoItemServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        setAccesControlHeaders(resp);
+
         try {
             List<ToDoItem> toDoItems = toDoItemService.getToDoItems();
 
@@ -55,13 +59,40 @@ public class ToDoItemServlet extends HttpServlet {
     }
 
     @Override
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        setAccesControlHeaders(resp);
+
+        String id= req.getParameter ( "id");
+        UpdateToDoItemRequest request =
+                ObjectMapperConfiguration.getObjectMapper().readValue(req.getReader(), UpdateToDoItemRequest.class);
+
+
+    }
+
+    @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-       String id= req.getParameter ( "id");
+        setAccesControlHeaders(resp);
+
+        String id= req.getParameter ( "id");
 
         try {
             toDoItemService.deleteToDoItem(Long.parseLong(id));
         } catch (SQLException | ClassNotFoundException e) {
             resp.sendError(500,"Internal Server Error " + e.getMessage());
+
         }
+
+    }
+        // pre-flight requests
+    @Override
+    protected void doOptions(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        setAccesControlHeaders(resp);
+
+    }
+        // CORS (cross-Origin-resources-Sharing)
+    private void setAccesControlHeaders(HttpServletResponse resp) {
+        resp.setHeader("Access-Control-Allow-Origin", "*");
+        resp.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+        resp.setHeader("Access-Control-Allow-Headers", "content-type");
     }
 }
