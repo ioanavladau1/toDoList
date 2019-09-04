@@ -66,8 +66,14 @@ public class ToDoItemServlet extends HttpServlet {
         UpdateToDoItemRequest request =
                 ObjectMapperConfiguration.getObjectMapper().readValue(req.getReader(), UpdateToDoItemRequest.class);
 
+        try {
+            toDoItemService.updateToDoItem(Long.parseLong(id), request);
+        } catch (SQLException | ClassNotFoundException e) {
+            resp.sendError(500,"Internal Server Error " + e.getMessage());
 
-    }
+        }
+        }
+
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

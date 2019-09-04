@@ -10,22 +10,24 @@ import java.util.List;
 
 public class ToDoItemRepository {
 
-    public void  createToDoItem(String description, LocalDateTime deadline) throws SQLException, IOException, ClassNotFoundException {
-      String insertSql = " INSERT INTO to_do_item (description, deadline) VALUES (?, ? )";
+    public void createToDoItem(String description, LocalDateTime deadline) throws SQLException, IOException, ClassNotFoundException {
+        String insertSql = " INSERT INTO to_do_item (description, deadline) VALUES (?, ? )";
 
-       //try with resorces
+        //try with resorces
         try (Connection connection = DatabaseConfiguration.getConnection()) {
 
-            PreparedStatement preparedStatement = connection.prepareStatement(insertSql);{
+            PreparedStatement preparedStatement = connection.prepareStatement(insertSql);
+            {
 
-            preparedStatement.setString(1, description);
-            preparedStatement.setDate(2, java.sql.Date.valueOf(deadline.toLocalDate()));
+                preparedStatement.setString(1, description);
+                preparedStatement.setDate(2, java.sql.Date.valueOf(deadline.toLocalDate()));
 
-            preparedStatement.executeUpdate();
+                preparedStatement.executeUpdate();
             }
         }
 
     }
+
     public List<ToDoItem> getToDoItems() throws SQLException, IOException, ClassNotFoundException {
         String query = "SELECT id, description, deadline, done FROM to_do_item";
 
@@ -51,6 +53,7 @@ public class ToDoItemRepository {
 
 
     }
+
     public void deteteToDoItem(long id) throws SQLException, IOException, ClassNotFoundException {
         String sql = "DELETE FROM to_do_item WHERE id = ?";
         try (Connection connection = DatabaseConfiguration.getConnection();
@@ -60,18 +63,17 @@ public class ToDoItemRepository {
 
             preparedStatement.executeUpdate();
         }
-        }
+    }
 
-    public void updateToDoItem(long id, boolean done) throws SQLException, IOException, ClassNotFoundException{
-        String sql = "UPDATE to_do_item SET done = ? WHERE done = ?";
+    public void updateToDoItem(long id, boolean done) throws SQLException, IOException, ClassNotFoundException {
+        String sql = "UPDATE to_do_item SET done = ? WHERE id = ?";
 
         try (Connection connection = DatabaseConfiguration.getConnection();
-        PreparedStatement preparedStatement = connection.prepareStatement(sql)){
-            preparedStatement.setBoolean(2, done);
-            preparedStatement.setLong(1, id);
+             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setBoolean(1, done);
+            preparedStatement.setLong(2, id);
             preparedStatement.executeUpdate();
         }
-
 
     }
 }
